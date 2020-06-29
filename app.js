@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const url = 'mongodb://localhost:27017/project'
 
+
 const app = express();
 
 mongoose.connect(url, {useNewUrlParser:true,  useUnifiedTopology: true }, (err)=>{
@@ -10,7 +11,8 @@ mongoose.connect(url, {useNewUrlParser:true,  useUnifiedTopology: true }, (err)=
 })
 
 //app setting
-app.use(express.urlencoded({extended: false}))
+
+app.use(express.urlencoded({extended: false}));
 
 
 //route
